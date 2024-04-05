@@ -1,0 +1,119 @@
+@import "../../../utils/breakpoints.module.scss";
+@import "../../../utils/variables.module.scss";
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.add {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 20;
+    transform: translate(-50%, -50%) scaleX(0);
+    transition: all 0.2s 0.1s $cb-1;
+    transform-origin: 0%;
+    height: 2.5rem;
+    cursor: pointer;
+    width: 2.5rem;
+}
+
+.add_wrapper {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.plus {
+    height: 7px;
+    width: 2.7rem;
+    background-color: $black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s 0s $cb-1, background-color 0.1s 0s ease-in-out;
+
+    @include breakpoint(sm) {
+        width: 2.1em;
+        height: 5px;
+    }
+}
+
+.image_container {
+    width: 100%;
+    background-color: $white2;
+    display: grid;
+    place-items: center;
+    padding: 30% 19%;
+    height: 23rem;
+    transition: all 0.4s 0.2s $cb-1;
+    position: relative;
+
+    &:hover {
+        & > .image {
+            filter: blur(40px) brightness(1.2);
+            transform: scale(1.1);
+            transition: all 0.3s 0s $cb-1;
+        }
+
+        & > .add {
+            transform: translate(-50%, -50%) scaleX(1);
+            transition: transform 0.2s 0.1s $cb-1;
+
+            & .plus:last-child {
+                transition: transform 0.3s 0.2s $cb-1,
+                    background-color 0.1s 0s ease-in-out;
+
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+    }
+
+    @include breakpoint(xl) {
+        height: 21rem;
+    }
+    @include breakpoint(lg) {
+        height: 19rem;
+    }
+    @include breakpoint(md) {
+        height: 17rem;
+    }
+    @include breakpoint(sm) {
+        height: 14rem;
+    }
+}
+
+.image {
+    transition: all 0.2s 0.1s $cb-1;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    position: relative !important;
+}
+
+.text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem 0;
+}
+.title {
+    @include p3;
+    color: $black;
+    font-weight: 500;
+    // text-transform: lowercase;
+    // &::first-letter {
+    //     text-transform: uppercase;
+    // }
+}
+
+.brand {
+    @include p4;
+    color: $black;
+    font-weight: 200;
+    opacity: 50%;
+}

@@ -1,0 +1,84 @@
+@import "../../../../utils/breakpoints.module.scss";
+@import "../../../../utils/variables.module.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.2rem;
+    position: relative;
+}
+.big_container {
+    grid-column: 1 / -1;
+}
+
+.label {
+    @include p3;
+    font-weight: 400;
+    color: $grey2;
+    padding-left: 0.2rem;
+}
+
+.input_container {
+    width: 100%;
+    position: relative;
+}
+
+@keyframes text-gradient-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 300% 0%;
+    }
+}
+.focusbg {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    padding: 0.1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(110deg, $blue, $purple, $pink, $purple, $blue);
+    transition: all 0.3s $cb-1;
+    background-size: 300% 100%;
+    background-position: 0% 0%;
+    animation: text-gradient-animation 10s infinite forwards linear;
+    // filter: blur(5px);
+    opacity: 0;
+    z-index: -1;
+}
+
+.input,
+.textarea {
+    all: unset;
+    height: 100%;
+    box-sizing: border-box;
+    background: white;
+    padding: 0.6vw 0.65vw;
+    border-radius: 0rem;
+    border: 1px solid $grey2;
+    width: 100%;
+    @include p2;
+    font-weight: 400;
+    transition: all 0.3s $cb-1;
+
+    &:focus {
+        border: 1px solid transparent;
+        & + .focusbg {
+            opacity: 1;
+        }
+    }
+
+    @include breakpoint(sm) {
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+.textarea {
+    min-height: 10rem;
+}

@@ -1,0 +1,39 @@
+@import "../../../utils/breakpoints.module.scss";
+@import "../../../utils/variables.module.scss";
+
+.container {
+    @include page-width;
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.header {
+    @include h1;
+}
+
+.submit {
+    all: unset;
+    cursor: pointer;
+    background: $black;
+    color: $white1;
+    padding: 0.8rem 1.5rem;
+    @include p3;
+    font-weight: 500;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    @include breakpoint(md) {
+        padding: 0.75em 1.4em;
+    }
+    @include breakpoint(sm) {
+        padding: 0.7em 1.3em;
+    }
+}

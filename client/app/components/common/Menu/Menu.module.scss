@@ -1,0 +1,112 @@
+@import "../../../utils/breakpoints.module.scss";
+@import "../../../utils/variables.module.scss";
+
+.container {
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: 0;
+    right: 0;
+    background-color: $white2;
+    z-index: 40;
+    transition: all 0.4s $cb-1;
+    transform: translateX(100%);
+
+    @include breakpoint(md) {
+        width: 100vw;
+        height: 100dvh;
+        transition: all 0.4s ease-in-out;
+    }
+}
+.open {
+    transform: translateX(0%);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    padding-right: 7rem;
+    min-height: 6rem;
+    max-height: 6rem;
+    gap: 3rem;
+
+    @include breakpoint(md) {
+        min-height: 4rem;
+        max-height: 4rem;
+        gap: 1rem;
+        padding-right: 4rem;
+    }
+}
+
+.basic_link {
+    @include h3;
+    color: $black;
+    text-decoration: none;
+}
+
+.category_grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    @include breakpoint(md) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+.category {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+        & .overlay {
+            opacity: 0.6;
+        }
+
+        & .title {
+            transform: scale(1.1);
+            transform-origin: 10% 20%;
+        }
+    }
+}
+.title {
+    @include h3;
+    color: $white2;
+    z-index: 44;
+    position: absolute;
+    transition: all 0.3s 0s $cb-1;
+    padding: 1.5rem 2rem;
+}
+.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $overlay-gradient;
+    opacity: 1;
+    transition: all 0.3s 0s $cb-1;
+    z-index: 43;
+}

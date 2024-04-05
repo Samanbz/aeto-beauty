@@ -1,0 +1,22 @@
+@import "../../../utils/breakpoints.module.scss";
+@import "../../../utils/variables.module.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 15rem 0;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0rem;
+    @include breakpoint(prt) {
+        margin: 10rem 0;
+    }
+}
+
+.header {
+    @include h1;
+    color: $black;
+    @include page-width;
+    font-weight: 600;
+    margin: auto;
+}

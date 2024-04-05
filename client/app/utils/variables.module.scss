@@ -1,0 +1,101 @@
+$white1: #f6f6f6;
+$white2: #efefef;
+
+$grey1: #c5c5c5;
+$grey2: rgb(180, 180, 180);
+$black: #151515;
+
+$pink: #c538ec;
+$purple: #8338ec;
+$blue: #3a86ff;
+$text-gradient: linear-gradient(to right bottom, $pink 10%, $purple, $blue 90%);
+$text-gradient-reverse: linear-gradient(
+    to right bottom,
+    $blue 0%,
+    $purple 100%,
+    $blue
+);
+
+$page-width-xxl: 80rem;
+$page-width-xl: 65rem;
+$page-width-lg: 55rem;
+$page-width-md: 85vw;
+$page-width-sm: 85vw;
+
+@mixin page-width {
+    @include respond(
+        width,
+        $page-width-sm,
+        $page-width-md,
+        $page-width-lg,
+        $page-width-xl,
+        $page-width-xxl
+    );
+}
+
+$overlay-gradient: radial-gradient(
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+);
+
+$cb-1: cubic-bezier(0.19, 0.88, 0.43, 0.98);
+$cb-2: cubic-bezier(0.85, 0.33, 0.87, 0.41);
+
+@mixin text-gradient {
+    background: $text-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.4s $cb-1;
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+}
+
+@mixin text-gradient-animation {
+    @keyframes text-gradient-animation {
+        0% {
+            background-position: 100% 0%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+}
+
+@mixin title {
+    @include respond(font-size, 12vw, 8vw, 5vw, 5vw, 5vw);
+    font-weight: 700;
+}
+
+@mixin p1 {
+    @include respond(font-size, 1.3rem, 1.3rem, 1.1rem, 1.3rem, 1.85rem);
+    font-weight: 400;
+}
+
+@mixin p2 {
+    @include respond(font-size, 0.8rem, 1rem, 1.1rem, 1.25rem, 1.5rem);
+    font-weight: 300;
+}
+
+@mixin p3 {
+    @include respond(font-size, 0.8rem, 0.9rem, 0.8rem, 0.9rem, 1.15rem);
+}
+
+@mixin p4 {
+    @include respond(font-size, 0.7rem, 0.8rem, 0.7rem, 0.8rem, 1rem);
+}
+
+@mixin h1 {
+    @include respond(font-size, 2rem, 3rem, 3.6rem, 4.5rem, 5rem);
+    font-weight: 700;
+}
+
+@mixin h2 {
+    @include respond(font-size, 1.3rem, 2rem, 2rem, 2.5rem, 3rem);
+    font-weight: 500;
+}
+
+@mixin h3 {
+    @include respond(font-size, 1.2rem, 1.5rem, 1.5rem, 2rem, 2.3rem);
+    font-weight: 500;
+}

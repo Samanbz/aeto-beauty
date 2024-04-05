@@ -1,0 +1,103 @@
+@import "../../utils/breakpoints.module.scss";
+@import "../../utils/variables.module.scss";
+
+.supercontainer {
+    width: 100vw;
+    height: 300vh;
+    position: relative;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    overflow-y: hidden;
+    position: sticky;
+    top: 0;
+
+    @include breakpoint(prt) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+.left {
+    background-color: $white1;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(142, 142, 142, 0.2);
+
+    @include breakpoint(prt) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        border-radius: 2rem;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(142, 142, 142, 0.2);
+        background: rgba(255, 255, 255, 0.909);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.59);
+    }
+
+    @include breakpoint(sm) {
+        border-radius: 1.5rem;
+        top: 47vh;
+    }
+}
+
+@keyframes text-gradient-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 300% 0%;
+    }
+}
+
+.title {
+    @include title;
+    padding: 30% 20%;
+    line-height: 100%;
+    & > span {
+        background: linear-gradient(
+            110deg,
+            $blue,
+            $purple,
+            $pink,
+            $purple,
+            $blue
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 0.4s $cb-1;
+        background-size: 300% 100%;
+        background-position: 0% 0%;
+        animation: text-gradient-animation 10s infinite forwards linear;
+    }
+
+    @include breakpoint(prt) {
+        padding: 20% 8%;
+    }
+    @include breakpoint(sm) {
+        padding: 20% 11%;
+    }
+}
+.right {
+    background-color: $white2;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+    @include breakpoint(prt) {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}

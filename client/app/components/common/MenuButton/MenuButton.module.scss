@@ -1,0 +1,88 @@
+@import "../../../utils/breakpoints.module.scss";
+@import "../../../utils/variables.module.scss";
+
+.container {
+    position: fixed;
+    top: 0rem;
+    right: 0rem;
+    height: 6rem;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    z-index: 50;
+
+    @include breakpoint(prt) {
+        height: 5rem;
+    }
+    @include breakpoint(sm) {
+        height: 4rem;
+    }
+}
+.subcontainer {
+    cursor: pointer;
+    padding: 0.3rem;
+
+    display: grid;
+    gap: 0.3rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    @include breakpoint(md) {
+        gap: 0.25rem;
+    }
+    @include breakpoint(sm) {
+        gap: 0.2rem;
+    }
+}
+
+.subcontainer {
+    & .open_button_elem.one {
+        transform: rotate(180deg);
+        transform-origin: 200%;
+    }
+    & .open_button_elem.six {
+        transform: rotate(180deg);
+        transform-origin: -100%;
+    }
+}
+
+.subcontainer:hover {
+    & .one {
+        // transform: rotate(180deg);
+        // transform-origin: 200%;
+        transform: translateX(150%);
+    }
+    & .six {
+        // transform: rotate(180deg);
+        // transform-origin: -100%;
+        transform: translateX(-150%);
+    }
+
+    & .two {
+        transform: translateX(150%);
+    }
+    & .five {
+        transform: translateX(-150%);
+    }
+
+    & .three {
+        transform: translateY(150%);
+    }
+    & .four {
+        transform: translateY(-150%);
+    }
+}
+.button_elem {
+    width: 0.6rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: $black;
+    transition: all 0.4s 0s $cb-1;
+
+    @include breakpoint(md) {
+        width: 0.5rem;
+    }
+    @include breakpoint(sm) {
+        width: 0.4rem;
+    }
+}

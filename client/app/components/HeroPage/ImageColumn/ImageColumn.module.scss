@@ -1,0 +1,32 @@
+@import "../../../utils/breakpoints.module.scss";
+@import "../../../utils/variables.module.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2rem;
+
+    @include breakpoint(prt) {
+        gap: 0rem;
+        width: 20vw;
+    }
+
+    @include breakpoint(sm) {
+    width: 30vw;
+        &:last-of-type {
+            display: none;
+        }
+    }
+}
+
+.image {
+    max-width: 100% !important;
+    width: auto !important;
+    height: 100% !important;
+    position: relative !important;
+    object-fit: contain;
+    object-position: center;
+}

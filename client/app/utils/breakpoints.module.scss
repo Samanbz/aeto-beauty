@@ -1,0 +1,86 @@
+$breakpoints: (
+    sm: (
+        min: 600px,
+        max: 599.98px,
+    ),
+    md: (
+        min: 1200px,
+        max: 1199.98px,
+    ),
+
+    lg: (
+        min: 1800,
+        max: 1799.98px,
+    ),
+    xl: (
+        min: 2150,
+        max: 2149px,
+    ),
+
+    xxl: (
+        min: 100000px,
+        max: 99999px,
+    ),
+    prt: (),
+);
+
+@mixin breakpoint($breakpoint, $direction: max, $prt: false) {
+    @if $breakpoint == prt {
+        @media (orientation: portrait) {
+            @content;
+        }
+    }
+    $breakpoint-values: map-get($breakpoints, $breakpoint);
+    $breakpoint-min: map-get($breakpoint-values, min);
+    $breakpoint-max: map-get($breakpoint-values, max);
+
+    //check if we are writing styles for larger or smaller screens
+    @if $direction == min {
+        @if $prt {
+            @media (min-width: map-get(map-get($breakpoints,sm),min)) and (orientation: landscape) {
+                @content;
+            }
+        } @else {
+            @media (min-width: $breakpoint-min) {
+                @content;
+            }
+        }
+    } @else {
+        @if $prt {
+            @if $breakpoint == md {
+                @media (max-width: $breakpoint-max) and (orientation: portrait) {
+                    @content;
+                }
+            } @else {
+                @if $breakpoint == sm {
+                    @media (max-width: $breakpoint-max) and (orientation: portrait) {
+                        @content;
+                    }
+                }
+            }
+        } @else {
+            @media (max-width: $breakpoint-max) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin respond($property, $sm, $md: $sm, $lg: $md, $xl: $lg, $xxl: $xl) {
+    @include breakpoint(xxl) {
+        #{$property}: $xxl;
+    }
+    @include breakpoint(xl) {
+        #{$property}: $xl;
+    }
+    @include breakpoint(lg) {
+        #{$property}: $lg;
+    }
+
+    @include breakpoint(md) {
+        #{$property}: $md;
+    }
+    @include breakpoint(sm) {
+        #{$property}: $sm;
+    }
+}

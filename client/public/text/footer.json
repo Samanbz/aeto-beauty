@@ -1,0 +1,11 @@
+{
+    "en": {
+        "section1": {
+            "header": "Address",
+            "content": "AetO GmbH\nTheodor-Heuss-Allee 112\n60486 Frankfurt am Main\nGermany"
+        },
+        "section2": {
+            "header": "Contact"
+        }
+    }
+}

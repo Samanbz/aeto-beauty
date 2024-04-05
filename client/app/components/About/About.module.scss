@@ -1,0 +1,34 @@
+@import "../../utils/breakpoints.module.scss";
+@import "../../utils/variables.module.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include page-width;
+    margin: 10rem auto;
+    gap: 2rem;
+
+    @include breakpoint(md) {
+        margin: 6rem auto;
+        align-self: center;
+    }
+}
+
+.header {
+    @include p2;
+    opacity: 0.5;
+}
+
+.body {
+    @include p1;
+    line-height: 135%;
+    width: 100%;
+    padding-right: 15%;
+
+    @include breakpoint(md) {
+        @include p2;
+        padding-right: 0;
+    }
+}
