@@ -1,0 +1,8 @@
+@import "../../utils/breakpoints.module.scss";
+@import "../../utils/variables.module.scss";
+
+.container {
+    @include page-width;
+    margin: 10rem auto;
+}
+

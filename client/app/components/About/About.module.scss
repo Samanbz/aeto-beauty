@@ -19,16 +19,22 @@
 .header {
     @include p2;
     opacity: 0.5;
+    font-family: inherit;
 }
 
-.body {
-    @include p1;
+.body,
+.bodybig {
+    @include p2;
     line-height: 135%;
     width: 100%;
     padding-right: 15%;
-
+    font-weight: 200;
     @include breakpoint(md) {
         @include p2;
         padding-right: 0;
     }
+}
+
+.bodybig {
+    @include p1;
 }

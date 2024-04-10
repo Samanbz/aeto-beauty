@@ -2,6 +2,7 @@
 @import "../../utils/variables.module.scss";
 
 .open {
+    min-height: 100vh;
     transition: all 0.3s 0s $cb-1;
     & > .overlay {
         opacity: 1;
@@ -21,8 +22,7 @@
     opacity: 0;
 }
 .closed {
-    min-height: 85vh;
-
+    min-height: 100vh;
     & > .overlay {
         transition: opacity 0.2s 0.1s $cb-1, visibility 0s 0.4s linear;
         opacity: 0;

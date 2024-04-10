@@ -35,6 +35,7 @@ const FadeInWrapper = ({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                fontFamily: "inherit",
             }}
             initial={{ y: initialOffset, opacity: initialOpacity }}
             animate={

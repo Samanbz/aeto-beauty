@@ -9,13 +9,16 @@
     position: relative;
     margin: 3rem 0;
     row-gap: 1.5rem;
+    @include breakpoint(lg) {
+        margin: 2rem 0;
+    }
     @include breakpoint(md) {
         margin: 0;
-        margin-top: 6rem;
+        margin-top: 3rem;
     }
     @include breakpoint(sm) {
         grid-template-columns: 1fr;
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 }
 

@@ -1,7 +1,8 @@
+import PrivacyPolicy from "@/app/components/PrivacyPolicy/PrivacyPolicy";
 import React from "react";
 
 const PrivacyPolicyPage = () => {
-    return <div>PrivacyPolicyPage</div>;
+    return <PrivacyPolicy />;
 };
 
 export default PrivacyPolicyPage;

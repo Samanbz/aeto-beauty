@@ -64,7 +64,9 @@
     @include title;
     padding: 30% 20%;
     line-height: 100%;
+
     & > span {
+        padding: 0 0.2rem;
         background: linear-gradient(
             110deg,
             $blue,
@@ -73,6 +75,7 @@
             $purple,
             $blue
         );
+        font-family: inherit;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;

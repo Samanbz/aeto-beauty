@@ -13,6 +13,12 @@ import {
     useSpring,
     useTransform,
 } from "framer-motion";
+import { DM_Serif_Display } from "next/font/google";
+
+const dmserif = DM_Serif_Display({
+    subsets: ["latin-ext"],
+    weight: "400",
+});
 
 const HeroPage = () => {
     const text = textContent.en;
@@ -91,7 +97,7 @@ const HeroPage = () => {
             <motion.div className={styles.container}>
                 <div className={styles.left}>
                     <motion.h1
-                        className={styles.title}
+                        className={`${styles.title} ${dmserif.className}`}
                         initial={{ y: "5%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{

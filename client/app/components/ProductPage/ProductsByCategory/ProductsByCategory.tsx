@@ -7,6 +7,7 @@ import Categories from "@/app/types/Categories";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import RegisterWarning from "../../RegisterWarning/RegisterWarning";
 import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
+import Header from "../../Header/Header";
 
 interface ProductsByCategoryProps {
     categoryId: string;
@@ -19,11 +20,7 @@ const ProductsByCategory = ({ categoryId }: ProductsByCategoryProps) => {
     return (
         <div className={styles.container}>
             <RegisterWarning />
-            <FadeInWrapper>
-                <div className={styles.header}>
-                    {category ? category : "Category not found"}
-                </div>
-            </FadeInWrapper>
+            <Header header={category ? category : "Category not found"} />
             {filteredProducts && <ProductGrid products={filteredProducts} />}
         </div>
     );

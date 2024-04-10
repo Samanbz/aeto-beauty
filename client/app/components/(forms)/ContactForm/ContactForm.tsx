@@ -28,7 +28,7 @@ const ContactForm = () => {
         let email = formData["email"];
         let phone = formData["phone"];
         let message = formData["message"];
-
+        console.log(process.env.NEXT_PUBLIC_API_URL);
         axios
             .post(process.env.NEXT_PUBLIC_API_URL + "/contact", {
                 firstname: firstname,

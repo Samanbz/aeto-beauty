@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Onest } from "next/font/google";
+import { Onest, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/common/Navbar/Navbar";
 import Menu from "./components/common/Menu/Menu";
@@ -7,7 +7,7 @@ import PageWrapper from "./components/PageWrapper/PageWrapper";
 import Footer from "./components/Footer/Footer";
 
 const onest = Onest({
-    subsets: ["latin"],
+    subsets: ["latin-ext"],
     weight: ["200", "300", "400", "500", "600", "700"],
 });
 

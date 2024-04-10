@@ -4,19 +4,16 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: 15rem 0;
+    margin: 15rem auto;
     align-items: flex-start;
     justify-content: center;
     gap: 0rem;
-    @include breakpoint(prt) {
-        margin: 10rem 0;
-    }
-}
-
-.header {
-    @include h1;
-    color: $black;
     @include page-width;
-    font-weight: 600;
-    margin: auto;
+
+    @include breakpoint(md) {
+        margin: 10rem auto;
+    }
+    @include breakpoint(sm) {
+        margin: 7rem auto;
+    }
 }

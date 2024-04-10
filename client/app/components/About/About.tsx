@@ -9,7 +9,7 @@ const About = () => {
         <div className={styles.container}>
             <h3 className={styles.header}>{text.header}</h3>
             <FadeInWrapper margin={35} initialOpacity={0.2}>
-                <p className={styles.body}>{parseSpan(text.p1)}</p>
+                <p className={styles.bodybig}>{parseSpan(text.p1)}</p>
             </FadeInWrapper>
             <FadeInWrapper margin={35} initialOpacity={0.2}>
                 <p className={styles.body}>{parseSpan(text.p2)}</p>

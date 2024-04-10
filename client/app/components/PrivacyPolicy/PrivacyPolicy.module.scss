@@ -1,2 +1,106 @@
 @import "../../utils/breakpoints.module.scss";
 @import "../../utils/variables.module.scss";
+
+$margin-xl: 1rem;
+$margin-md: 0.5rem;
+$margin-sm: 0rem;
+
+.container {
+    @include page-width;
+    margin: 10rem auto;
+    color: $black;
+
+    @include breakpoint(prt) {
+        margin: 8rem auto;
+    }
+}
+
+.title {
+    @include h1;
+}
+
+.content {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+
+    @include breakpoint(sm) {
+        gap: 1.5rem;
+    }
+}
+
+.section,
+.subsection,
+.subsubsection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.subsection {
+    gap: 0.3rem;
+    margin: 0.5rem 0;
+    margin-left: $margin-xl;
+    @include breakpoint(md) {
+        margin-left: $margin-md;
+    }
+    @include breakpoint(sm) {
+        margin-left: $margin-sm;
+    }
+}
+
+.subsubsection {
+    gap: 0.3rem;
+    margin: 0.3rem 0;
+    @include breakpoint(md) {
+        margin-left: $margin-md;
+    }
+    @include breakpoint(sm) {
+        margin-left: $margin-sm;
+    }
+}
+
+.header {
+    @include h3;
+    font-weight: 500;
+}
+
+.subheader {
+    @include p1;
+    font-weight: 400;
+}
+
+.subsubheader {
+    @include p2;
+    font-weight: 300;
+}
+
+.body {
+    @include p4;
+    line-height: 130%;
+}
+
+.list {
+    list-style: disc;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.3rem;
+    margin: 0.3rem 0;
+}
+
+.body > span {
+    font-weight: 600;
+}
+
+.email,
+.phone {
+    @include p4;
+}
