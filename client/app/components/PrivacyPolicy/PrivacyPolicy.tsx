@@ -2,13 +2,15 @@ import React from "react";
 import styles from "./PrivacyPolicy.module.scss";
 import textContent from "@/public/text/privacy-policy.json";
 import { parseSpan } from "@/app/utils/textUtils";
+import Header from "../Header/Header";
 const PrivacyPolicy = () => {
     const textBase = textContent.en;
     const text = textBase.content;
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>{textBase.title}</h1>
+            <Header header={textBase.title} />
+
             <div className={styles.content}>
                 <div className={styles.section}>
                     <h2 className={styles.header}>{text.section1.header}</h2>

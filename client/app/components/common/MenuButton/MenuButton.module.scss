@@ -9,12 +9,9 @@
     aspect-ratio: 1 / 1;
     display: grid;
     place-items: center;
-    z-index: 50;
+    z-index: 55;
 
-    @include breakpoint(prt) {
-        height: 5rem;
-    }
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
         height: 4rem;
     }
 }

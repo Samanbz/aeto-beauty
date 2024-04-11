@@ -5,13 +5,15 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <div className={styles.container}>
-            <Link href="/" className={styles.logo_container}>
-                <h1 className={styles.logo_top}>AetO</h1>
-                <h2 className={styles.logo_bottom}>beauty</h2>
-            </Link>
+        <>
+            <div className={styles.container}>
+                <Link href="/" className={styles.logo_container}>
+                    <h1 className={styles.logo_top}>AetO</h1>
+                    <h2 className={styles.logo_bottom}>beauty</h2>
+                </Link>
+            </div>
             <MenuButton />
-        </div>
+        </>
     );
 };
 

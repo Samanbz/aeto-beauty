@@ -25,3 +25,24 @@ export const useRegisterWarningStore = create<registerWarningStore>((set) => ({
     show: () => set({ isShowing: true }),
     hide: () => set({ isShowing: false }),
 }));
+
+enum language {
+    en = "en",
+    de = "de",
+}
+interface languageStore {
+    language: language;
+    setEnglish: () => void;
+    setGerman: () => void;
+    toggle: () => void;
+}
+
+export const useLanguageStore = create<languageStore>((set) => ({
+    language: language.en,
+    setEnglish: () => set({ language: language.en }),
+    setGerman: () => set({ language: language.de }),
+    toggle: () =>
+        set((state) => ({
+            language: state.language == language.de ? language.en : language.de,
+        })),
+}));

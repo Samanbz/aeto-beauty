@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FormSection.module.scss";
+import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
 
 interface FormSectionProps {
     title?: string;
@@ -8,14 +9,16 @@ interface FormSectionProps {
 
 const FormSection = ({ title, children }: FormSectionProps) => {
     return (
-        <div className={styles.container}>
-            {title && (
-                <div className={styles.title_container}>
-                    <h1 className={styles.title}>{title}</h1>
-                </div>
-            )}
-            {children}
-        </div>
+        <FadeInWrapper heightAuto margin={5}>
+            <div className={styles.container}>
+                {title && (
+                    <div className={styles.title_container}>
+                        <h1 className={styles.title}>{title}</h1>
+                    </div>
+                )}
+                {children}
+            </div>
+        </FadeInWrapper>
     );
 };
 

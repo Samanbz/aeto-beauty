@@ -4,6 +4,8 @@ import styles from "./ContactForm.module.scss";
 import FormSection from "../FormSection/FormSection";
 import Input from "../FormSection/Input/Input";
 import axios from "axios";
+import Header from "../../Header/Header";
+import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
 
 const ContactForm = () => {
     const fetchFormData = (e: React.FormEvent<HTMLFormElement>) => {
@@ -37,14 +39,14 @@ const ContactForm = () => {
                 phone: phone,
                 message: message,
             })
-            .then((res) => console.log(res))
+            .then((res) => (e.target as HTMLFormElement).reset())
             .catch((err) => console.log(err));
         fetchFormData(e);
     };
 
     return (
         <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
-            <div className={styles.header}>Get in touch</div>
+            <Header header={"Contact"} />
             <FormSection>
                 <Input label="Firstname" required />
                 <Input label="Lastname" required />
@@ -52,8 +54,13 @@ const ContactForm = () => {
                 <Input label="Phone" />
                 <Input label="Message" big />
             </FormSection>
-
-            <input className={styles.submit} type="submit" value={"submit"} />
+            <FadeInWrapper heightAuto widthAuto delay={0.5} margin={5}>
+                <input
+                    className={styles.submit}
+                    type="submit"
+                    value={"submit"}
+                />
+            </FadeInWrapper>
         </form>
     );
 };

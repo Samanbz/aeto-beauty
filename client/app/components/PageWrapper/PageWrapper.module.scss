@@ -1,8 +1,17 @@
 @import "../../utils/breakpoints.module.scss";
 @import "../../utils/variables.module.scss";
 
-.open {
+.container {
     min-height: 100vh;
+    margin-bottom: 10rem;
+    @include breakpoint(md) {
+        margin-bottom: 8rem;
+    }
+    @include breakpoint(sm) {
+        marigin-bottom: 6rem;
+    }
+}
+.open {
     transition: all 0.3s 0s $cb-1;
     & > .overlay {
         opacity: 1;
@@ -22,7 +31,6 @@
     opacity: 0;
 }
 .closed {
-    min-height: 100vh;
     & > .overlay {
         transition: opacity 0.2s 0.1s $cb-1, visibility 0s 0.4s linear;
         opacity: 0;

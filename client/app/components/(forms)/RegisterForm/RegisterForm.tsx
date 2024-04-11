@@ -4,6 +4,8 @@ import FormSection from "../FormSection/FormSection";
 import styles from "./RegisterForm.module.scss";
 import Input from "../FormSection/Input/Input";
 import axios from "axios";
+import Header from "../../Header/Header";
+import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
 
 const RegisterForm = () => {
     const fetchFormData = (e: React.FormEvent<HTMLFormElement>) => {
@@ -67,12 +69,12 @@ const RegisterForm = () => {
                 num_of_locations: numberOfLocations,
                 message: message,
             })
-            .then((res) => console.log(res))
+            .then((res) => (e.target as HTMLFormElement).reset())
             .catch((err) => console.log(err));
     };
     return (
         <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
-            <div className={styles.header}>Register</div>
+            <Header header={"Register"} />
             <FormSection title={"You"}>
                 <Input label="Firstname" required />
                 <Input label="Lastname" required />
@@ -96,7 +98,13 @@ const RegisterForm = () => {
                 />
                 <Input label="Notes" name="message" big />
             </FormSection>
-            <input className={styles.submit} type="submit" value={"submit"} />
+            <FadeInWrapper heightAuto widthAuto margin={5}>
+                <input
+                    className={styles.submit}
+                    type="submit"
+                    value={"submit"}
+                />
+            </FadeInWrapper>
         </form>
     );
 };

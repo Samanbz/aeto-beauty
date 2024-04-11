@@ -3,56 +3,36 @@
 
 .container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 23rem 1fr;
     height: 100%;
-}
+    @include breakpoint(xl) {
+        grid-template-rows: 19rem 1fr;
+    }
 
-.add {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 20;
-    transform: translate(-50%, -50%) scaleX(0);
-    transition: all 0.2s 0.1s $cb-1;
-    transform-origin: 0%;
-    height: 2.5rem;
-    cursor: pointer;
-    width: 2.5rem;
-}
+    @include breakpoint(lg) {
+        grid-template-rows: 18rem 1fr;
+    }
 
-.add_wrapper {
-    position: relative;
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.plus {
-    height: 7px;
-    width: 2.7rem;
-    background-color: $black;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.2s 0s $cb-1, background-color 0.1s 0s ease-in-out;
-
+    @include breakpoint(md) {
+        grid-template-rows: 35vw 1fr;
+    }
     @include breakpoint(sm) {
-        width: 2.1em;
-        height: 5px;
+        grid-template-rows: 55vw 1fr;
     }
 }
 
 .image_container {
     width: 100%;
+    max-height: 100%;
+    min-height: 100%;
     background-color: $white2;
     display: grid;
     place-items: center;
     padding: 30% 19%;
-    height: 23rem;
     transition: all 0.4s 0.2s $cb-1;
     position: relative;
-
+    overflow: hidden;
     &:hover {
         & > .image {
             filter: blur(40px) brightness(1.2);
@@ -113,7 +93,51 @@
 
 .brand {
     @include p4;
-    color: $black;
-    font-weight: 200;
     opacity: 50%;
+    color: $black;
+
+    font-weight: 200;
+}
+.brand_logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 6%;
+    max-width: 20%;
+    margin: 3%;
+}
+
+.add {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 20;
+    transform: translate(-50%, -50%) scaleX(0);
+    transition: all 0.2s 0.1s $cb-1;
+    transform-origin: 0%;
+    height: 2.5rem;
+    cursor: pointer;
+    width: 2.5rem;
+}
+
+.add_wrapper {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.plus {
+    height: 7px;
+    width: 2.7rem;
+    background-color: $black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s 0s $cb-1, background-color 0.1s 0s ease-in-out;
+
+    @include breakpoint(sm) {
+        width: 2.1em;
+        height: 5px;
+    }
 }

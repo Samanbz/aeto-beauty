@@ -89,15 +89,14 @@
         padding: 20% 8%;
     }
     @include breakpoint(sm) {
-        padding: 20% 11%;
+        padding: 18% 14%;
     }
 }
 .right {
     background-color: $white2;
     z-index: 9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding: 0 5rem;
     @include breakpoint(prt) {
         width: 100%;

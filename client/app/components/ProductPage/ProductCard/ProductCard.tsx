@@ -47,13 +47,9 @@ const ProductCard = ({ product, idx }: ProductCardProps) => {
                         fill
                         loading="lazy"
                     />
-                    {/* {brand && (
-                    <img
-                        className={styles.logo}
-                        src={brand.image}
-                        alt={brand.name}
-                    />
-                )} */}
+                    {brand && (
+                        <img className={styles.brand_logo} src={brand.image} />
+                    )}
                 </div>
                 <div className={styles.text_wrapper}>
                     <h3 className={styles.title}>{product.name}</h3>

@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DraggableCarousel from "./DraggableCarousel/DraggableCarousel";
 import CategoryCard from "./CategoryCard/CategoryCard";
 import styles from "./CategoryCarousel.module.scss";
 import Categories from "@/app/types/Categories";
 import Link from "next/link";
+import { motion } from "framer-motion";
 const CategoryCarousel = () => {
     const numOfCategories = Categories.categories.length;
     const middleIndex =
@@ -13,9 +14,22 @@ const CategoryCarousel = () => {
             : (numOfCategories + 1) / 2;
 
     const [active, setActive] = useState(middleIndex);
+    const [clickable, setClickable] = useState(true);
+    useEffect(() => {
+        setClickable(false);
+        setTimeout(() => {
+            setClickable(true);
+        }, 200);
+        console.log(active);
+    }, [active]);
     return (
         <div className={styles.container}>
-            <DraggableCarousel active={active} setActive={setActive}>
+            <DraggableCarousel
+                active={active}
+                setActive={setActive}
+                clickable={clickable}
+                setClickable={setClickable}
+            >
                 <CategoryCard title="Make-Up" imgSrc="/categories/makeup.jpg" />
                 <CategoryCard
                     title="Dermatology"
@@ -35,12 +49,17 @@ const CategoryCarousel = () => {
                 />
                 <CategoryCard title="Care" imgSrc="/categories/care.jpg" />
             </DraggableCarousel>
-            <Link
-                className={styles.button}
-                href={`/${Categories.categories[active].pathName}`}
+            <motion.div
+                initial={{ opacity: 1 }}
+                animate={{ opacity: clickable ? 1 : 0, y: clickable ? 0 : 10 }}
             >
-                Produkte ansehen
-            </Link>
+                <Link
+                    className={styles.button}
+                    href={`/${Categories.categories[active].pathName}`}
+                >
+                    Produkte ansehen
+                </Link>
+            </motion.div>
         </div>
     );
 };

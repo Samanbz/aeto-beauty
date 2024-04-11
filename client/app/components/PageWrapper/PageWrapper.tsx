@@ -7,7 +7,11 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
     const { isOpen: isMenuOpen, close: closeMenu } = useMenuStore();
 
     return (
-        <div className={`${isMenuOpen ? styles.open : styles.closed}`}>
+        <div
+            className={`${styles.container} ${
+                isMenuOpen ? styles.open : styles.closed
+            }`}
+        >
             <div className={styles.overlay} onClick={() => closeMenu()} />
             {children}
         </div>

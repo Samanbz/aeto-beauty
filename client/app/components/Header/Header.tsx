@@ -9,7 +9,7 @@ const dmserif = DM_Serif_Display({
 });
 const Header = ({ header }: { header: string }) => {
     return (
-        <FadeInWrapper margin={5}>
+        <FadeInWrapper margin={5} heightAuto>
             <h1 className={`${styles.header} ${dmserif.className}`}>
                 {header}
             </h1>

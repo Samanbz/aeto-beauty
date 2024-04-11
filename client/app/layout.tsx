@@ -5,6 +5,7 @@ import Navbar from "./components/common/Navbar/Navbar";
 import Menu from "./components/common/Menu/Menu";
 import PageWrapper from "./components/PageWrapper/PageWrapper";
 import Footer from "./components/Footer/Footer";
+import { Suspense } from "react";
 
 const onest = Onest({
     subsets: ["latin-ext"],

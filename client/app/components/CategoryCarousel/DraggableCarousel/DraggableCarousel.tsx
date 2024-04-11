@@ -9,6 +9,8 @@ interface DraggableCarouselProps {
     children: React.ReactNode[];
     active: number;
     setActive: React.Dispatch<React.SetStateAction<number>>;
+    clickable: boolean;
+    setClickable: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const customEase = cubicBezier(0.3, 1.01, 0.73, 0.99);
@@ -16,11 +18,12 @@ const DraggableCarousel = ({
     children,
     active,
     setActive,
+    clickable,
+    setClickable,
 }: DraggableCarouselProps) => {
     let len = children && children.length;
 
     const [scope, animate] = useAnimate();
-    const [clickable, setClickable] = useState(true);
 
     const arrayMiddle = len % 2 == 0 ? len / 2 : (len + 1) / 2;
 

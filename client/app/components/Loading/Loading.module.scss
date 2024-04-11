@@ -1,0 +1,110 @@
+@import "../../utils/breakpoints.module.scss";
+@import "../../utils/variables.module.scss";
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+}
+
+.subcontainer {
+    position: relative;
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    @include breakpoint(md) {
+        gap: 0.25rem;
+    }
+}
+
+.loader_elem {
+    width: 0.8rem;
+    aspect-ratio: 1 / 1;
+    background-color: $black;
+    border-radius: 50%;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    @include breakpoint(md) {
+        width: 0.5rem;
+    }
+}
+
+.subcontainer {
+    & .one {
+        animation-name: one;
+    }
+    & .two {
+        animation-name: two;
+    }
+    & .three {
+        animation-name: three;
+    }
+    & .four {
+        animation-name: four;
+    }
+    & .five {
+        animation-name: five;
+    }
+    & .six {
+        animation-name: six;
+    }
+}
+
+@keyframes one {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+@keyframes two {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+@keyframes three {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(150%);
+    }
+}
+@keyframes four {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-150%);
+    }
+}
+@keyframes five {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}
+@keyframes six {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}
