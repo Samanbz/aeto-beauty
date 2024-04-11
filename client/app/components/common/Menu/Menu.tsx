@@ -64,11 +64,10 @@ const Menu = () => {
                     >
                         <div className={styles.title}>{category.name}</div>
                         <div className={styles.overlay} />
-                        <Image
+                        <img
                             className={styles.image}
                             src={`/categories/${category.pathName}.jpg`}
                             alt={category.name}
-                            fill
                         />
                     </Link>
                 ))}
