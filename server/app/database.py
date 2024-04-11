@@ -9,9 +9,8 @@ load_dotenv()
 db_user = os.environ['DB_USER']
 db_pwd = os.environ['DB_PWD']
 db_port = os.environ['DB_PORT']
-
 SQLALCHEMY_DATABASE_URL = f"""postgresql://{
-    db_user}:{db_pwd}@localhost:{db_port}/aeto-beauty"""
+    db_user}:{db_pwd}@91.132.144.32:{db_port}/aeto-beauty"""
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 

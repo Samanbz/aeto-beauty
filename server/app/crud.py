@@ -21,7 +21,7 @@ def notify_email(request: schemas.ContactRequest):
     date = datetime.now()
 
     message = f"""Subject: {request.firstname} {request.lastname}\n\n
-    Date Submitted: {weekdays[date.isoweekday()]} {date.date()}\n
+    Date Submitted: {weekdays[date.isoweekday() - 1]} {date.date()}\n
     First Name: {request.firstname}\n
     Last Name: {request.lastname}\n
     Email: {request.email}\n
@@ -33,7 +33,7 @@ def notify_email(request: schemas.ContactRequest):
         date = datetime.now()
 
         message = f"""Subject:{request.firstname} {request.lastname} wants to register!\n\n
-    Date Submitted: {weekdays[date.isoweekday()]} {date.date()}
+    Date Submitted: {weekdays[date.isoweekday() - 1]} {date.date()}
      First Name: {request.firstname}\n
      Last Name: {request.lastname}\n
      Email: {request.email}\n
@@ -47,8 +47,8 @@ def notify_email(request: schemas.ContactRequest):
      Number of Locations: {"N/A" if request.num_of_locations == -1 else request.num_of_locations}\n
      Further Notes: {request.message}\n
      """
+    
     context = ssl.create_default_context()
-
     with smtplib.SMTP_SSL(server, port, context=context) as server_session:
         server_session.login(sender, pwd)
         server_session.sendmail(sender, sender, message)
