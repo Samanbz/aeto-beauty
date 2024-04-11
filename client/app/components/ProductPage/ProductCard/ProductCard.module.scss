@@ -52,25 +52,13 @@
             }
         }
     }
-
-    @include breakpoint(xl) {
-        height: 21rem;
-    }
-    @include breakpoint(lg) {
-        height: 19rem;
-    }
-    @include breakpoint(md) {
-        height: 17rem;
-    }
-    @include breakpoint(sm) {
-        height: 14rem;
-    }
 }
 
 .image {
     transition: all 0.2s 0.1s $cb-1;
     width: 100% !important;
     height: 100% !important;
+    max-height: 100% !important;
     object-fit: contain !important;
     position: relative !important;
 }
