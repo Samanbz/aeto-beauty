@@ -8,8 +8,8 @@ const Impressum = () => {
     return (
         <div className={styles.container}>
             <Header header={"Impressum"} />
-            {text.content.map((item) => (
-                <div className={styles.section}>
+            {text.content.map((item, key) => (
+                <div key={key} className={styles.section}>
                     <h3 className={styles.header}>{item.header}</h3>
                     <p className={styles.body}>{parseSpan(item.body)}</p>
                 </div>

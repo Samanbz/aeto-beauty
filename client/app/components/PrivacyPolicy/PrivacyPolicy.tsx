@@ -41,8 +41,8 @@ const PrivacyPolicy = () => {
                         </p>
                         <ul className={styles.list}>
                             {text.section3.subsection2.body.listitems.map(
-                                (item) => (
-                                    <li className={styles.body}>
+                                (item, key) => (
+                                    <li key={key} className={styles.body}>
                                         <span>{item.term}</span>{" "}
                                         {item.definition}
                                     </li>
@@ -73,8 +73,10 @@ const PrivacyPolicy = () => {
                             </p>
                             <ul className={styles.list}>
                                 {text.section4.subsection1.subsubsection1.body.listitems.map(
-                                    (item) => (
-                                        <li className={styles.body}>{item}</li>
+                                    (item, key) => (
+                                        <li key={key} className={styles.body}>
+                                            {item}
+                                        </li>
                                     )
                                 )}
                             </ul>
@@ -114,8 +116,8 @@ const PrivacyPolicy = () => {
                             </p>
                             <ul className={styles.list}>
                                 {text.section4.subsection1.subsubsection3.body.listitems1.map(
-                                    (item) => (
-                                        <li className={styles.body}>
+                                    (item, key) => (
+                                        <li key={key} className={styles.body}>
                                             <span>{item.term}</span>{" "}
                                             {item.definition}
                                         </li>
@@ -142,8 +144,8 @@ const PrivacyPolicy = () => {
                             </p>
                             <ul className={styles.list}>
                                 {text.section4.subsection1.subsubsection3.body.listitems2.map(
-                                    (item) => (
-                                        <li className={styles.body}>
+                                    (item, key) => (
+                                        <li key={key} className={styles.body}>
                                             <span>{item.term}</span>{" "}
                                             {item.definition}
                                         </li>
@@ -165,8 +167,8 @@ const PrivacyPolicy = () => {
                         {text.section5.body.listheader1}
                     </p>
                     <ul className={styles.list}>
-                        {text.section5.body.listitems1.map((item) => (
-                            <li className={styles.body}>
+                        {text.section5.body.listitems1.map((item, key) => (
+                            <li className={styles.body} key={key}>
                                 <span>{item.term}</span>
                                 {item.definition}
                             </li>
@@ -176,8 +178,8 @@ const PrivacyPolicy = () => {
                         {text.section5.body.listheader2}
                     </p>
                     <ul className={styles.list}>
-                        {text.section5.body.listitems2.map((item) => (
-                            <li className={styles.body}>
+                        {text.section5.body.listitems2.map((item, key) => (
+                            <li className={styles.body} key={key}>
                                 <span>{item.term}</span>
                                 {item.definition}
                             </li>
@@ -187,8 +189,8 @@ const PrivacyPolicy = () => {
                         {text.section5.body.listheader1}
                     </p>
                     <ul className={styles.list}>
-                        {text.section5.body.listitems1.map((item) => (
-                            <li className={styles.body}>
+                        {text.section5.body.listitems1.map((item, key) => (
+                            <li className={styles.body} key={key}>
                                 <span>{item.term}</span>
                                 {item.definition}
                             </li>
@@ -233,8 +235,10 @@ const PrivacyPolicy = () => {
                         </p>
                         <ul className={styles.list}>
                             {text.section8.subsection3.body.listitems.map(
-                                (item) => (
-                                    <li className={styles.body}>{item}</li>
+                                (item, key) => (
+                                    <li key={key} className={styles.body}>
+                                        {item}
+                                    </li>
                                 )
                             )}
                         </ul>

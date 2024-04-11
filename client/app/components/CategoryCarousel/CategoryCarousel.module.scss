@@ -7,10 +7,13 @@
     align-items: center;
     margin: 15rem 0;
     justify-content: center;
-    gap: 6rem;
+    gap: 7rem;
 
     @include breakpoint(md) {
         margin: 10rem 0;
+    }
+    @include breakpoint(sm) {
+        gap: 5rem;
     }
 }
 

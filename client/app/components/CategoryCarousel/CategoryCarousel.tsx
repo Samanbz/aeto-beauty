@@ -51,7 +51,10 @@ const CategoryCarousel = () => {
             </DraggableCarousel>
             <motion.div
                 initial={{ opacity: 1 }}
-                animate={{ opacity: clickable ? 1 : 0, y: clickable ? 0 : 10 }}
+                animate={{
+                    opacity: clickable ? 1 : 0,
+                    y: clickable ? 0 : "60%",
+                }}
             >
                 <Link
                     className={styles.button}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMenuStore } from "@/app/utils/globalStore";
 import Categories from "@/app/types/Categories";
 import { useLanguageStore } from "@/app/utils/globalStore";
+import Image from "next/image";
 const Menu = () => {
     const { isOpen: isMenuOpen, close: closeMenu } = useMenuStore();
     const {
@@ -63,10 +64,11 @@ const Menu = () => {
                     >
                         <div className={styles.title}>{category.name}</div>
                         <div className={styles.overlay} />
-                        <img
+                        <Image
                             className={styles.image}
                             src={`/categories/${category.pathName}.jpg`}
                             alt={category.name}
+                            fill
                         />
                     </Link>
                 ))}
