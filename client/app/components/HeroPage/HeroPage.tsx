@@ -93,7 +93,7 @@ const HeroPage = () => {
     ];
     useEffect(() => {
         console.log(process.env.NEXT_PUBLIC_API_URL);
-        console.log(axios.get("http://localhost:8000/"));
+        axios.get("http://localhost:8000/").then((res) => console.log(res));
     });
     const parsedTitle = parseSpan(text.title);
     return (

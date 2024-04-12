@@ -20,7 +20,6 @@ const CategoryCarousel = () => {
         setTimeout(() => {
             setClickable(true);
         }, 200);
-        console.log(active);
     }, [active]);
     return (
         <div className={styles.container}>

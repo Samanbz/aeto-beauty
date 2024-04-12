@@ -39,21 +39,21 @@ const RegisterForm = () => {
         let numberOfLocations = parseInt(formData["numberOfLocations"]) || -1;
         let message = formData["message"];
 
-        console.log(formData);
-        console.log(
-            "firstname: " + firstname + "\n",
-            "lastname: " + lastname + "\n",
-            "email: " + email + "\n",
-            "phone: " + phone + "\n",
-            "position: " + position + "\n",
-            "companyName: " + companyName + "\n",
-            "companyType: " + companyType + "\n",
-            "companyWebsite: " + companyWebsite + "\n",
-            "companyAddress: " + companyAddress + "\n",
-            "estimatedQuantity: " + estimatedQuantity + "\n",
-            "numberOfLocations: " + numberOfLocations + "\n",
-            "message: " + message + "\n"
-        );
+        // console.log(formData);
+        // console.log(
+        //     "firstname: " + firstname + "\n",
+        //     "lastname: " + lastname + "\n",
+        //     "email: " + email + "\n",
+        //     "phone: " + phone + "\n",
+        //     "position: " + position + "\n",
+        //     "companyName: " + companyName + "\n",
+        //     "companyType: " + companyType + "\n",
+        //     "companyWebsite: " + companyWebsite + "\n",
+        //     "companyAddress: " + companyAddress + "\n",
+        //     "estimatedQuantity: " + estimatedQuantity + "\n",
+        //     "numberOfLocations: " + numberOfLocations + "\n",
+        //     "message: " + message + "\n"
+        // );
         axios
             .post(process.env.NEXT_PUBLIC_API_URL + "/register", {
                 firstname: firstname,
