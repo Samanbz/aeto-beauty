@@ -14,6 +14,7 @@ import {
     useTransform,
 } from "framer-motion";
 import { DM_Serif_Display } from "next/font/google";
+import axios from 'axios';
 
 const dmserif = DM_Serif_Display({
     subsets: ["latin-ext"],
@@ -92,6 +93,7 @@ const HeroPage = () => {
     ];
     useEffect(() => {
         console.log(process.env.NEXT_PUBLIC_API_URL);
+        console.log(axios.get("http://localhost:8000/"));
     })
     const parsedTitle = parseSpan(text.title);
     return (
