@@ -33,7 +33,7 @@ def notify_email(request: schemas.ContactRequest):
         date = datetime.now()
 
         message = f"""Subject:{request.firstname} {request.lastname} wants to register!\n\n
-    Date Submitted: {weekdays[date.isoweekday() - 1]} {date.date()}
+     Date Submitted: {weekdays[date.isoweekday() - 1]} {date.date()}\n
      First Name: {request.firstname}\n
      Last Name: {request.lastname}\n
      Email: {request.email}\n
