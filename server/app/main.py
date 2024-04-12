@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
@@ -31,6 +31,14 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+@app.middleware("http")
+async def test_origin(request: Request, call_next):
+    origin = request.headers.get("Origin")
+    print("Origin: " + origin)
+    response = await call_next(origin)
+    return response
 
 
 @app.get("/")
