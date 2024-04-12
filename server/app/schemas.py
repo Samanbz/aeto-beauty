@@ -14,11 +14,7 @@ class ContactRequest(BaseModel):
 
 
 class RegisterRequest(ContactRequest):
-    # firstname: str
-    # lastname: str
-    # email: str
-    # phone: str
-    # message: str
+
     position: str
 
     company_name: str

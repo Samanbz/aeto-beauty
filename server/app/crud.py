@@ -47,7 +47,7 @@ def notify_email(request: schemas.ContactRequest):
      Number of Locations: {"N/A" if request.num_of_locations == -1 else request.num_of_locations}\n
      Further Notes: {request.message}\n
      """
-    
+
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(server, port, context=context) as server_session:
         server_session.login(sender, pwd)
@@ -70,7 +70,7 @@ def submit_register_request(db: Session, request: schemas.RegisterRequest):
         company_address=request.company_address,
         estimated_quantity=request.estimated_quantity,
         num_of_locations=request.num_of_locations,
-        messages=request.message
+        message=request.message
     )
     db.add(db_request)
     db.commit()
