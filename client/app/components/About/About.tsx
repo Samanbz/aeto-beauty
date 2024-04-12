@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
 import styles from "./About.module.scss";
 import textContent from "@/public/text/about.json";
 import FadeInWrapper from "../common/FadeInWrapper/FadeInWrapper";
 import { parseSpan } from "@/app/utils/textUtils";
+import { useLanguageStore } from "@/app/utils/globalStore";
 const About = () => {
-    const text = textContent.de;
+    const { language } = useLanguageStore();
+    const text = textContent[language];
     return (
         <div className={styles.container}>
             <h3 className={styles.header}>{text.header}</h3>

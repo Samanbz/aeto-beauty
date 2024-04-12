@@ -7,14 +7,20 @@
     align-items: center;
     margin: 15rem 0;
     justify-content: center;
-    gap: 7rem;
+    gap: 2rem;
 
     @include breakpoint(md) {
         margin: 10rem 0;
     }
-    @include breakpoint(sm) {
-        gap: 5rem;
-    }
+}
+
+.header {
+    @include p2;
+    opacity: 0.5;
+
+    text-align: left;
+    @include page-width;
+    margin: auto;
 }
 
 .button {

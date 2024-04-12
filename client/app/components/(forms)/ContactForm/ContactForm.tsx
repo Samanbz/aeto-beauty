@@ -6,6 +6,8 @@ import Input from "../FormSection/Input/Input";
 import axios from "axios";
 import Header from "../../Header/Header";
 import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
+import { useLanguageStore } from "@/app/utils/globalStore";
+import textContent from "@/public/text/register.json";
 
 const ContactForm = () => {
     const fetchFormData = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,6 +22,9 @@ const ContactForm = () => {
 
         return formData;
     };
+
+    const { language } = useLanguageStore();
+    const text = textContent[language];
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -45,19 +50,19 @@ const ContactForm = () => {
 
     return (
         <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
-            <Header header={"Contact"} />
+            <Header header={text.header2} />
             <FormSection>
-                <Input label="Firstname" required />
-                <Input label="Lastname" required />
-                <Input label="Email" required />
-                <Input label="Phone" />
-                <Input label="Message" big />
+                <Input label={text.section1.fn} required />
+                <Input label={text.section1.ln} required />
+                <Input label={text.section1.email} required />
+                <Input label={text.section1.phone} />
+                <Input label={text.section2.ms} big />
             </FormSection>
             <FadeInWrapper heightAuto widthAuto delay={0.5} margin={5}>
                 <input
                     className={styles.submit}
                     type="submit"
-                    value={"submit"}
+                    value={text.button}
                 />
             </FadeInWrapper>
         </form>

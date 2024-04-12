@@ -1,5 +1,10 @@
 {
+    "en": {
+        "header": "Products",
+        "button": "Browse products"
+    },
     "de": {
-        "header": "Produkte"
+        "header": "Produkte",
+        "button": "Produke ansehen"
     }
 }

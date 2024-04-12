@@ -29,7 +29,7 @@ const products: Product[] = [
         "00107",
         "Turbo Lash Travel Size High Powered Volume + Length Mascara"
     ),
-    new Product("00108", "Futurist Aqua Brilliance™ Watery Glow Primer"),
+    new Product("00108", "Futurist Aqua Brilliance Watery Glow Primer"),
     new Product("00109", "1Pure Color Envy Lip Oil-Serum"),
     new Product(
         "00110",
@@ -47,12 +47,12 @@ const products: Product[] = [
     new Product("00210", "1ALL HOURS CONCEALER"),
 
     new Product("00301", "Make-up Foundation 0.5.N Porcelain"),
-    new Product("00302", "Augenpflege-Concealer 1-2R Rose Porcelain"),
-    new Product("00303", "Pflegendes Puder 2 Hell bis Mittel"),
+    new Product("00302", "Eye care concealer 1-2R Rose Porcelain"),
+    new Product("00303", "Nourishing powder 2 Light to medium"),
     new Product("00304", "Mascara Intense Black"),
     new Product("00305", "Meta Light Eyeliner 09 Polar White"),
     new Product("00306", "Unbelieva Brow 48H Gel 7.0 Blonde"),
-    new Product("00307", "Lippenstift 105 Beautiful Rosewood"),
+    new Product("00307", "Lipstick  105 Beautiful Rosewood"),
     new Product("00308", "Le Lipliner 630 Beige A Nu "),
     new Product(
         "00309",
@@ -60,7 +60,7 @@ const products: Product[] = [
     ),
     new Product(
         "00310",
-        "Augenbrauenstift 24h Filling Triangular Pencil 8.0 Light Cool Blonde"
+        "Eyebrow pencil 24h Filling Triangular Pencil 8.0 Light Cool Blonde"
     ),
 
     new Product("00401", "Easy Bake Loose Baking & Setting Powder"),
@@ -85,14 +85,14 @@ const products: Product[] = [
     new Product("00509", "sun club matt bronzing powder 01"),
     new Product("00510", "I LOVE EXTREME crazy volume mascara"),
 
-    new Product("10601", "BODY Feuchtigkeitsspendender Balsam"),
-    new Product("10602", "Cleanance Reinigungsgel"),
-    new Product("10603", "HYALURON ACTIV B3 Zellerneuernde Creme"),
-    new Product("10604", "XeraCalm A.D Rückfettende Creme "),
+    new Product("10601", "BODY Moisturizing Balm"),
+    new Product("10602", "Cleanance cleansing gel"),
+    new Product("10603", "HYALURON ACTIV B3 Cell renewing cream"),
+    new Product("10604", "XeraCalm A.D Replenishing cream"),
     new Product("10605", "ULTRA FLUID PERFECTOR SPF 50+"),
-    new Product("10606", "Sonnenspray SPF 50+"),
-    new Product("10607", "HYALURON ACTIV B3 Aufpolsterndes Serum-Konzentrat"),
-    new Product("10608", "A-OXitive AUGEN Straffende Augenpflege"),
+    new Product("10606", "Sun spray SPF 50+"),
+    new Product("10607", "HYALURON ACTIV B3 Plumping serum concentrate"),
+    new Product("10608", "A-OXitive EYE TIGHTENING EYE CARE"),
     new Product("10609", "Cleanance MASK Peeling-Maske"),
     new Product("10610", "Cold Cream Intensiv-Handcreme"),
 
@@ -105,23 +105,23 @@ const products: Product[] = [
     new Product("10805", "LIPIKAR BAUME AP+M PAPP-TUBE RÜCK- FETTENDER BALSAM"),
     new Product("10806", "ANTHELIOS AGE CORRECT LSF 50"),
     new Product("10807", "ANTHELIOS INVISIBLE FLUID LSF 30"),
-    new Product("10808", "24H PHYSIOLOGISCHE DEO-ROLL-ON"),
-    new Product("10809", "EFFACLAR HOCH KONZENTRIERTES SERUM"),
+    new Product("10808", "24H PHYSIOLOGICAL DEODORANT ROLL-ON"),
+    new Product("10809", "EFFACLAR HIGHLY CONCENTRATED SERUM"),
     new Product("10810", "CICAPLAST BAUME B5+"),
 
     new Product(
         "10901",
-        "1.	DermatoClean [Hyaluron] Mizellen-Reinigungsfluid 3 in 1"
+        "1.	DermatoClean [Hyaluron] Micellar cleansing fluid 3 in 1"
     ),
-    new Product("10902", "DermoPure Triple Effect Reinigungsgel"),
+    new Product("10902", "DermoPure Triple Effect Cleansing gel"),
     new Product("10903", "DermoPure Triple Effect Serum"),
-    new Product("10904", "DermoPure Waschpeeling"),
-    new Product("10905", "DermoPure Therapiebegleitende Feuchtigkeitspflege"),
-    new Product("10906", "Q10 Active Tagespflege"),
-    new Product("10907", "pH5 Ultraleichte Feuchtigkeitscreme"),
-    new Product("10908", "Hyaluron-Filler + 3x Effect Serum-Konzentrat"),
-    new Product("10909", "Hyaluron-Filler + Elasticity Augenpflege LSF 20"),
-    new Product("10910", "Hyaluron-Filler + 3x Effect 5% Urea Tag"),
+    new Product("10904", "DermoPure Wash scrub"),
+    new Product("10905", "DermoPure Moisturizing care to accompany therapy"),
+    new Product("10906", "Q10 Active Day care"),
+    new Product("10907", "pH5 Ultra-light moisturizer"),
+    new Product("10908", "Hyaluron filler + 3x Effect Serum concentrate"),
+    new Product("10909", "Hyaluron filler + Elasticity Eye Care LSF 20"),
+    new Product("10910", "Hyaluron filler + 3x Effect 5% Urea Tag"),
 
     new Product("11001", "Sébium Hydra"),
     new Product("11002", "Sensibio AR"),
@@ -348,14 +348,14 @@ const products: Product[] = [
         "52902",
         "Feuchtigkeitsspendende Gesichtscreme mit LSF 50 (LSF 30 auch erhältlich)"
     ),
-    new Product("52903", "Feuchtigkeitsspendende Gesichtscreme"),
-    new Product("52904", "SA Glättende Reinigung"),
-    new Product("52905", "Porentiefe Reinigung"),
-    new Product("52906", "Feuchtigkeitslotion"),
-    new Product("52907", "Regenerierende Augencreme"),
-    new Product("52908", "Feuchtigkeitscreme"),
-    new Product("52909", "SA Urea Glättende Feuchtigkeitscreme"),
-    new Product("52910", "Ultra Reparierender Balsam"),
+    new Product("52903", "Moisturizing face cream"),
+    new Product("52904", "SA Smoothing cleaning"),
+    new Product("52905", "Deep pore cleaning"),
+    new Product("52906", "Moisturizing lotion"),
+    new Product("52907", "Regenerating eye cream"),
+    new Product("52908", "Moisturizing cream"),
+    new Product("52909", "SA Urea Smoothing Moisturizing Cream"),
+    new Product("52910", "Ultra Repairing Balm"),
 ];
 
 export default products;

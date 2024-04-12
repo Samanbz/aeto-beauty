@@ -10,19 +10,14 @@
     gap: 2rem;
     position: relative;
     overflow-x: clip;
+    padding-bottom: 3%;
 
+    @include breakpoint(md) {
+        padding-bottom: 8%;
+    }
     @include breakpoint(prt) {
         gap: 1rem;
     }
-}
-
-.header {
-    @include p2;
-    opacity: 0.5;
-
-    text-align: left;
-    @include page-width;
-    margin: auto;
 }
 
 .feature_container {

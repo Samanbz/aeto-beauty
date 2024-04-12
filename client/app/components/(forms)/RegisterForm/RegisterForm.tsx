@@ -6,6 +6,8 @@ import Input from "../FormSection/Input/Input";
 import axios from "axios";
 import Header from "../../Header/Header";
 import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
+import { useLanguageStore } from "@/app/utils/globalStore";
+import textContent from "@/public/text/register.json";
 
 const RegisterForm = () => {
     const fetchFormData = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,6 +22,9 @@ const RegisterForm = () => {
 
         return formData;
     };
+
+    const { language } = useLanguageStore();
+    const text = textContent[language];
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -74,35 +79,32 @@ const RegisterForm = () => {
     };
     return (
         <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
-            <Header header={"Register"} />
-            <FormSection title={"You"}>
-                <Input label="Firstname" required />
-                <Input label="Lastname" required />
-                <Input label="Email" required />
-                <Input label="Phone" />
-                <Input label="Position" />
+            <Header header={text.header} />
+            <FormSection title={text.section1.header}>
+                <Input label={text.section1.fn} required />
+                <Input label={text.section1.ln} required />
+                <Input label={text.section1.email} required />
+                <Input label={text.section1.phone} />
+                <Input label={text.section1.position} />
             </FormSection>
-            <FormSection title={"Your Business"}>
-                <Input label="Name" name="companyName" required />
-                <Input label="Type" name="companyType" />
-                <Input label="Website" name="companyWebsite" />
-                <Input label="Address" name="companyAddress" />
+            <FormSection title={text.section2.header}>
+                <Input label={text.section2.cn} name="companyName" required />
+                <Input label={text.section2.ct} name="companyType" />
+                <Input label={text.section2.cw} name="companyWebsite" />
+                <Input label={text.section2.ca} name="companyAddress" />
+                <Input label={text.section2.eq} name="estimatedQuantity" />
                 <Input
-                    label="Estimated opening order quantity"
-                    name="estimatedQuantity"
-                />
-                <Input
-                    label="Number of locations"
+                    label={text.section2.nol}
                     name="numberOfLocations"
                     type="number"
                 />
-                <Input label="Notes" name="message" big />
+                <Input label={text.section2.ms} name="message" big />
             </FormSection>
             <FadeInWrapper heightAuto widthAuto margin={0}>
                 <input
                     className={styles.submit}
                     type="submit"
-                    value={"submit"}
+                    value={text.button}
                 />
             </FadeInWrapper>
         </form>

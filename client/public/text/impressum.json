@@ -30,5 +30,38 @@
                 "body": "Despite careful control of the content, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
             }
         ]
+    },
+
+    "de": {
+        "content": [
+            {
+                "header": "Adresse",
+                "body": "AetO GmbH\nTheodor-Heuss-Allee 112\n60486 Frankfurt am Main\nDeutschland"
+            },
+            {
+                "header": "Kontakt",
+                "body": "+49 69 6677 411 58\ninfo@aeto-beauty.com\nwww.aeto-beauty.com"
+            },
+            {
+                "header": "Bevollmächtigter Vertreter der Aktionäre",
+                "body": "Gracian Schwitalla"
+            },
+            {
+                "header": "Registergericht, Handelsregisternummer",
+                "body": "Frankfurt am Main, HRB 127513"
+            },
+            {
+                "header": "Umsatzsteuer-Identifikationsnummer",
+                "body": "DE33 1485 254"
+            },
+            {
+                "header": "Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV",
+                "body": "Gracian Schwitalla"
+            },
+            {
+                "header": "Rechtlicher Hinweis",
+                "body": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+            }
+        ]
     }
 }

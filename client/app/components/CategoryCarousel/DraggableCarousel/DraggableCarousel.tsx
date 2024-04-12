@@ -78,7 +78,6 @@ const DraggableCarousel = ({
 
     return (
         <div className={styles.container}>
-            <h2 className={styles.header}>{text.header}</h2>
             <motion.div
                 ref={scope}
                 className={styles.feature_container}

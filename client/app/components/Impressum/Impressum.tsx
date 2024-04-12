@@ -1,10 +1,15 @@
+"use client";
 import React from "react";
 import styles from "./Impressum.module.scss";
 import textContent from "@/public/text/impressum.json";
 import { parseSpan } from "@/app/utils/textUtils";
 import Header from "../Header/Header";
+import { useLanguageStore } from "@/app/utils/globalStore";
+
 const Impressum = () => {
-    const text = textContent.en;
+    const { language } = useLanguageStore();
+    const text = textContent[language];
+
     return (
         <div className={styles.container}>
             <Header header={"Impressum"} />

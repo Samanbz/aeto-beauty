@@ -1,0 +1,48 @@
+{
+    "en": {
+        "header": "Register",
+        "header2": "Contact",
+        "section1": {
+            "header": "You",
+            "fn": "Firstname",
+            "ln": "Lastname",
+            "email": "Email",
+            "phone": "Phone",
+            "position": "Position"
+        },
+        "section2": {
+            "header": "Your Business",
+            "cn": "Name",
+            "ct": "Type",
+            "cw": "Website",
+            "ca": "Addres",
+            "eq": "Estimated opening order quantity",
+            "nol": "Number of locations",
+            "ms": "Message"
+        },
+        "button": "submit"
+    },
+    "de": {
+        "header": "Registrieren",
+        "header2": "Kontakt",
+        "section1": {
+            "header": "Sie",
+            "fn": "Vorname",
+            "ln": "Nachname",
+            "email": "E-Mail",
+            "phone": "Telefon",
+            "position": "Position"
+        },
+        "section2": {
+            "header": "Ihr Unternehmen",
+            "cn": "Name",
+            "ct": "Typ",
+            "cw": "Webseite",
+            "ca": "Adresse",
+            "eq": "Geschätzte Erstbestellmenge",
+            "nol": "Anzahl der Standorte",
+            "ms": "Nachricht"
+        },
+        "button": "Absenden"
+    }
+}
