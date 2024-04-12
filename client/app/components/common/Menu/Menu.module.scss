@@ -116,7 +116,9 @@
     transition: all 0.3s 0s $cb-1;
     background-color: $grey1;
     padding: 0.5rem;
-    width: 2rem;
+    @include breakpoint(sm) {
+        width: 2rem;
+    }
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     &:hover {
