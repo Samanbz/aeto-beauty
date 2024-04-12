@@ -1,0 +1,36 @@
+services:
+    client:
+        build: ./aeto-beauty/client
+        ports:
+            - 3000:3000
+        depends_on:
+            - server
+
+    server:
+        build: ./aeto-beauty/server
+        ports:
+            - 8000:8000
+        environment:
+            - DB_USER=aeto
+            - DB_PWD=AetO!?
+            - DB_PORT=5432
+            - SMTP_SERVER=smtp.strato.de
+            - SMTP_PORT=465
+            - SMTP_EMAIL=info@aeto-beauty.com
+            - SMTP_PWD=!?AetO-Beauty60486
+            - 
+        depends_on:
+            - database
+
+    database:
+        image: postgres:latest
+        environment:
+            - POSTGRES_USER=aeto
+            - POSTGRES_PASSWORD=AetO!?
+        ports:
+            - 5432:5432
+        volumes:
+            - dbdata:/var/lib/postgresql/data
+
+volumes:
+    dbdata:
