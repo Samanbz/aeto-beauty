@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
 @font-face {
-    font-family: Onest;
-    src: url("/public/fonts/Onest.ttf") format("ttf");
+    font-family: "Onest", Poppins, "Helvetica";
+    src: url("/fonts/Onest.ttf") format("ttf");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
