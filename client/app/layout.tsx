@@ -9,7 +9,7 @@ import { Suspense } from "react";
 
 const onest = Onest({
     subsets: ["latin-ext"],
-    weight: ["200", "300", "400", "500", "600", "700"],
+    display: "swap",
 });
 
 export const metadata: Metadata = {
