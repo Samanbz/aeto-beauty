@@ -10,10 +10,7 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://91.132.144.32",
-    "http://91.132.144.32:3000"
+    "http://91.132.144.32"
 ]
 
 app.add_middleware(
@@ -36,7 +33,7 @@ def get_db():
 @app.middleware("http")
 async def test_origin(request: Request, call_next):
     origin = request.headers.get("Origin")
-    print("Origin: " + origin)
+    print("Origin: " + origin + " " + origin in origins)
     response = await call_next(origin)
     return response
 
