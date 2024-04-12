@@ -9,7 +9,7 @@ interface FormSectionProps {
 
 const FormSection = ({ title, children }: FormSectionProps) => {
     return (
-        <FadeInWrapper heightAuto margin={5}>
+        <FadeInWrapper heightAuto margin={0}>
             <div className={styles.container}>
                 {title && (
                     <div className={styles.title_container}>

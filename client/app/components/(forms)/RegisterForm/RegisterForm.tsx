@@ -98,7 +98,7 @@ const RegisterForm = () => {
                 />
                 <Input label="Notes" name="message" big />
             </FormSection>
-            <FadeInWrapper heightAuto widthAuto margin={5}>
+            <FadeInWrapper heightAuto widthAuto margin={0}>
                 <input
                     className={styles.submit}
                     type="submit"

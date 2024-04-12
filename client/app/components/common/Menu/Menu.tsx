@@ -24,6 +24,14 @@ const Menu = () => {
     return (
         <div className={`${styles.container} ${isMenuOpen ? styles.open : ""}`}>
             <div className={styles.top}>
+                <div className={styles.language_container}>
+                    <div
+                        className={styles.language}
+                        onClick={() => handleLanguageToggle()}
+                    >
+                        {language}
+                    </div>
+                </div>
                 <div className={styles.basic_link_container}>
                     <Link
                         href={"/"}
@@ -46,12 +54,6 @@ const Menu = () => {
                     >
                         Get in touch
                     </Link>
-                </div>
-                <div
-                    className={styles.language}
-                    onClick={() => handleLanguageToggle()}
-                >
-                    {language}
                 </div>
             </div>
             <div className={styles.category_grid}>

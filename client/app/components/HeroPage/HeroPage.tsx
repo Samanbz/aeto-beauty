@@ -90,7 +90,9 @@ const HeroPage = () => {
         allProducts.getProductById("31810"),
         allProducts.getProductById("52708"),
     ];
-
+    useEffect(() => {
+        console.log(process.env.NEXT_PUBLIC_API_URL);
+    })
     const parsedTitle = parseSpan(text.title);
     return (
         <div className={styles.supercontainer} ref={scrollRef}>

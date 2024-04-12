@@ -21,6 +21,12 @@
         transition: all 0.4s ease-in-out;
         opacity: 0;
     }
+
+    @include breakpoint(sm) {
+        display: grid;
+        grid-template-rows: 1fr 7fr;
+        grid-template-columns: 1fr;
+    }
 }
 .open {
     transform: translateX(0%);
@@ -30,6 +36,7 @@
 .top {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     width: 100%;
     justify-content: space-between;
     padding: 0 2rem;
@@ -50,7 +57,12 @@
         min-height: auto;
         justify-content: flex-start;
         max-height: 200rem;
-        height: 10rem;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 4rem auto;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
     }
 }
 .basic_link_container {
@@ -70,6 +82,7 @@
 
     @include breakpoint(sm) {
         width: 100%;
+        justify-self: center;
         max-width: 20rem;
         padding: 1.2rem 0;
     }
@@ -86,6 +99,16 @@
     }
 }
 
+.language_container {
+    @include breakpoint(sm) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .language {
     @include p3;
     cursor: pointer;
@@ -93,10 +116,9 @@
     transition: all 0.3s 0s $cb-1;
     background-color: $grey1;
     padding: 0.5rem;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-    @include breakpoint(sm) {
-        margin-top: 0.5rem;
-    }
     &:hover {
         color: $grey1;
         background-color: $black;
