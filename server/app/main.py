@@ -35,10 +35,9 @@ def get_db():
 @app.middleware("http")
 async def test_origin(request: Request, call_next):
     origin = request.headers.get("Origin")
-    print("Origin: " + origin)
-    print(origin in origins)
-    response = await call_next(origin)
-    return response
+    print("Request from: ", end="")
+    print(origin)
+    return await call_next(request)
 
 
 @app.get("/")
