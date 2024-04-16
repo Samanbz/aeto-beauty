@@ -5,9 +5,9 @@ import products from "@/public/products/products";
 import Products from "@/app/types/Products";
 import Categories from "@/app/types/Categories";
 import ProductGrid from "../ProductGrid/ProductGrid";
-import RegisterWarning from "../../RegisterWarning/RegisterWarning";
+import RegisterWarning from "../../(alerts)/RegisterWarning/RegisterWarning";
 import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
-import Header from "../../Header/Header";
+import Header from "../../common/Header/Header";
 
 interface ProductsByCategoryProps {
     categoryId: string;

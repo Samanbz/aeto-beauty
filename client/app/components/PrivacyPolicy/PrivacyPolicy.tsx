@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PrivacyPolicy.module.scss";
 import textContent from "@/public/text/privacy-policy.json";
 import { parseSpan } from "@/app/utils/textUtils";
-import Header from "../Header/Header";
+import Header from "../common/Header/Header";
 const PrivacyPolicy = () => {
     const textBase = textContent.en;
     const text = textBase.content;

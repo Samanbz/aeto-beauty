@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import FadeInWrapper from "../common/FadeInWrapper/FadeInWrapper";
+import FadeInWrapper from "../FadeInWrapper/FadeInWrapper";
 import { DM_Serif_Display } from "next/font/google";
 
 const dmserif = DM_Serif_Display({

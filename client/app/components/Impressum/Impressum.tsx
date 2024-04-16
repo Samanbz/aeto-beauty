@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Impressum.module.scss";
 import textContent from "@/public/text/impressum.json";
 import { parseSpan } from "@/app/utils/textUtils";
-import Header from "../Header/Header";
+import Header from "../common/Header/Header";
 import { useLanguageStore } from "@/app/utils/globalStore";
 
 const Impressum = () => {

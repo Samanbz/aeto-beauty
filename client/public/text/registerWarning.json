@@ -1,0 +1,10 @@
+{
+    "en": {
+        "body": "You must register before submitting orders.",
+        "button": "Register now"
+    },
+    "de": {
+        "body": "Sie müssen sich registrieren, bevor Sie eine Anfrage stellen können.",
+        "button": "Jetzt registrieren"
+    }
+}

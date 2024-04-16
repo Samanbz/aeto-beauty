@@ -5,15 +5,11 @@ import Link from "next/link";
 import { useMenuStore } from "@/app/utils/globalStore";
 import Categories from "@/app/types/Categories";
 import { useLanguageStore } from "@/app/utils/globalStore";
-import Image from "next/image";
+import textContent from "@/public/text/menu.json";
+
 const Menu = () => {
     const { isOpen: isMenuOpen, close: closeMenu } = useMenuStore();
-    const {
-        language,
-        setEnglish,
-        setGerman,
-        toggle: toggleLanguage,
-    } = useLanguageStore();
+    const { language, toggle: toggleLanguage } = useLanguageStore();
 
     const handleLanguageToggle = () => {
         toggleLanguage();
@@ -21,6 +17,9 @@ const Menu = () => {
             closeMenu();
         }, 200);
     };
+
+    const text = textContent[language];
+
     return (
         <div className={`${styles.container} ${isMenuOpen ? styles.open : ""}`}>
             <div className={styles.top}>
@@ -45,14 +44,14 @@ const Menu = () => {
                         className={styles.basic_link}
                         onClick={() => closeMenu()}
                     >
-                        Register
+                        {text.register}
                     </Link>
                     <Link
                         href={"/contact"}
                         className={styles.basic_link}
                         onClick={() => closeMenu()}
                     >
-                        Get in touch
+                        {text.contact}
                     </Link>
                 </div>
             </div>

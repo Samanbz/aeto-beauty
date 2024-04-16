@@ -4,10 +4,16 @@ import styles from "./ContactForm.module.scss";
 import FormSection from "../FormSection/FormSection";
 import Input from "../FormSection/Input/Input";
 import axios from "axios";
-import Header from "../../Header/Header";
+import Header from "../../common/Header/Header";
 import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
-import { useLanguageStore } from "@/app/utils/globalStore";
+import {
+    useFormAlertStore,
+    useLanguageStore,
+    useFormErrorStore,
+} from "@/app/utils/globalStore";
 import textContent from "@/public/text/register.json";
+import FormAlert from "../../(alerts)/FormAlert/FormAlert";
+import FormError from "../../(alerts)/FormError/FormError";
 
 const ContactForm = () => {
     const fetchFormData = (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,6 +32,18 @@ const ContactForm = () => {
     const { language } = useLanguageStore();
     const text = textContent[language];
 
+    const { show: showFormAlert } = useFormAlertStore();
+    const { show: showFormError } = useFormErrorStore();
+
+    const handleSuccess = (form: HTMLFormElement) => {
+        form.reset();
+        showFormAlert();
+    };
+
+    const handleError = (form: HTMLFormElement) => {
+        showFormError();
+    };
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -43,8 +61,8 @@ const ContactForm = () => {
                 phone: phone,
                 message: message,
             })
-            .then((res) => (e.target as HTMLFormElement).reset())
-            .catch((err) => console.log(err));
+            .then(() => handleSuccess(e.target as HTMLFormElement))
+            .catch(() => handleError(e.target as HTMLFormElement));
         fetchFormData(e);
     };
 
@@ -65,6 +83,8 @@ const ContactForm = () => {
                     value={text.button}
                 />
             </FadeInWrapper>
+            <FormAlert />
+            <FormError />
         </form>
     );
 };

@@ -29,7 +29,7 @@ const HeroPage = () => {
 
     const { scrollYProgress } = useScroll({
         target: scrollRef,
-        offset: ["start start", "end 30%"],
+        offset: ["start start", "end 20%"],
     });
 
     const scrollYProgressSpring = useSpring(scrollYProgress, {
@@ -46,7 +46,7 @@ const HeroPage = () => {
     const col2Offset = useTransform(
         scrollYProgressSpring,
         [0, 1],
-        ["10%", "-10%"]
+        ["0%", "-10%"]
     );
     const col3Offset = useTransform(
         scrollYProgressSpring,
@@ -56,7 +56,7 @@ const HeroPage = () => {
     const col4Offset = useTransform(
         scrollYProgressSpring,
         [0, 1],
-        ["10%", "-20%"]
+        ["0%", "-20%"]
     );
 
     const col1Products = [

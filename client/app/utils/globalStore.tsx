@@ -26,6 +26,30 @@ export const useRegisterWarningStore = create<registerWarningStore>((set) => ({
     hide: () => set({ isShowing: false }),
 }));
 
+interface formAlertStore {
+    isShowing: boolean;
+    show: () => void;
+    hide: () => void;
+}
+
+export const useFormAlertStore = create<formAlertStore>((set) => ({
+    isShowing: false,
+    show: () => set({ isShowing: true }),
+    hide: () => set({ isShowing: false }),
+}));
+
+interface formErrorStore {
+    isShowing: boolean;
+    show: () => void;
+    hide: () => void;
+}
+
+export const useFormErrorStore = create<formAlertStore>((set) => ({
+    isShowing: false,
+    show: () => set({ isShowing: true }),
+    hide: () => set({ isShowing: false }),
+}));
+
 enum language {
     en = "en",
     de = "de",

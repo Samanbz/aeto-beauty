@@ -4,10 +4,16 @@ import FormSection from "../FormSection/FormSection";
 import styles from "./RegisterForm.module.scss";
 import Input from "../FormSection/Input/Input";
 import axios from "axios";
-import Header from "../../Header/Header";
+import Header from "../../common/Header/Header";
 import FadeInWrapper from "../../common/FadeInWrapper/FadeInWrapper";
-import { useLanguageStore } from "@/app/utils/globalStore";
+import {
+    useFormAlertStore,
+    useLanguageStore,
+    useFormErrorStore,
+} from "@/app/utils/globalStore";
 import textContent from "@/public/text/register.json";
+import FormAlert from "../../(alerts)/FormAlert/FormAlert";
+import FormError from "../../(alerts)/FormError/FormError";
 
 const RegisterForm = () => {
     const fetchFormData = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,6 +31,18 @@ const RegisterForm = () => {
 
     const { language } = useLanguageStore();
     const text = textContent[language];
+
+    const { show: showFormAlert } = useFormAlertStore();
+    const { show: showFormError } = useFormErrorStore();
+
+    const handleSuccess = (form: HTMLFormElement) => {
+        form.reset();
+        showFormAlert();
+    };
+
+    const handleError = (form: HTMLFormElement) => {
+        showFormError();
+    };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -44,21 +62,6 @@ const RegisterForm = () => {
         let numberOfLocations = parseInt(formData["numberOfLocations"]) || -1;
         let message = formData["message"];
 
-        // console.log(formData);
-        // console.log(
-        //     "firstname: " + firstname + "\n",
-        //     "lastname: " + lastname + "\n",
-        //     "email: " + email + "\n",
-        //     "phone: " + phone + "\n",
-        //     "position: " + position + "\n",
-        //     "companyName: " + companyName + "\n",
-        //     "companyType: " + companyType + "\n",
-        //     "companyWebsite: " + companyWebsite + "\n",
-        //     "companyAddress: " + companyAddress + "\n",
-        //     "estimatedQuantity: " + estimatedQuantity + "\n",
-        //     "numberOfLocations: " + numberOfLocations + "\n",
-        //     "message: " + message + "\n"
-        // );
         axios
             .post(process.env.NEXT_PUBLIC_API_URL + "/register", {
                 firstname: firstname,
@@ -74,8 +77,8 @@ const RegisterForm = () => {
                 num_of_locations: numberOfLocations,
                 message: message,
             })
-            .then((res) => (e.target as HTMLFormElement).reset())
-            .catch((err) => console.log(err));
+            .then(() => handleSuccess(e.target as HTMLFormElement))
+            .catch(() => handleError(e.target as HTMLFormElement));
     };
     return (
         <form className={styles.container} onSubmit={(e) => handleSubmit(e)}>
@@ -107,6 +110,8 @@ const RegisterForm = () => {
                     value={text.button}
                 />
             </FadeInWrapper>
+            <FormAlert />
+            <FormError />
         </form>
     );
 };

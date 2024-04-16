@@ -1,0 +1,9 @@
+@import "/app/utils/breakpoints.module.scss";
+@import "/app/utils/variables.module.scss";
+
+.header {
+    @include h1;
+    color: $black;
+    font-weight: 600;
+    width: 100%;
+}

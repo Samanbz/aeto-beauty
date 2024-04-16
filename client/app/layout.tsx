@@ -3,7 +3,7 @@ import { Onest, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/common/Navbar/Navbar";
 import Menu from "./components/common/Menu/Menu";
-import PageWrapper from "./components/PageWrapper/PageWrapper";
+import PageWrapper from "./components/common/PageWrapper/PageWrapper";
 import Footer from "./components/Footer/Footer";
 import { Suspense } from "react";
 
