@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Depends
+from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
@@ -10,7 +10,9 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 origins = [
-    "http://91.132.144.32"
+    "httpsgit ://91.132.144.32",
+    "https://aeto-beauty.com",
+    "https://www.aeto-beauty.com",
 ]
 
 app.add_middleware(
