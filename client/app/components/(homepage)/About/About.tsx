@@ -75,10 +75,8 @@ const About = () => {
                     </div>
                     <ul className={styles.list_wrapper}>
                         {text.section3.list.map((text, index) => (
-                            <FadeInWrapper delay={0.2 * index}>
-                                <li key={index} className={styles.list_item}>
-                                    {text}
-                                </li>
+                            <FadeInWrapper key={index} delay={0.2 * index}>
+                                <li className={styles.list_item}>{text}</li>
                             </FadeInWrapper>
                         ))}
                     </ul>
