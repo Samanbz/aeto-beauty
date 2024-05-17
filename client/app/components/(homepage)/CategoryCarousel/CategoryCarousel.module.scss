@@ -5,19 +5,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15rem 0;
+    margin-bottom: 15rem;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.3rem;
 
     @include breakpoint(md) {
         margin: 10rem 0;
-}
+    }
+
+    cursor: ew-resize;
 }
 
 .header {
-    @include p2;
+    @include p2p5;
     opacity: 0.5;
-
+    font-weight: 300;
     text-align: left;
     @include page-width;
     margin: auto;

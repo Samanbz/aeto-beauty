@@ -12,6 +12,7 @@ interface FadeInWrapperProps {
     initialOffset?: string;
     widthAuto?: boolean;
     heightAuto?: boolean;
+    justifyStart?: boolean;
 }
 const FadeInWrapper = ({
     children,
@@ -23,6 +24,7 @@ const FadeInWrapper = ({
     initialOffset = "5%",
     widthAuto = false,
     heightAuto = false,
+    justifyStart = false,
 }: FadeInWrapperProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: once, margin: `-${margin}% 0%` });
@@ -36,7 +38,7 @@ const FadeInWrapper = ({
                 height: heightAuto ? "auto" : "100%",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
+                justifyContent: justifyStart ? "flex-start" : "center",
                 fontFamily: "inherit",
             }}
             initial={{ y: initialOffset, opacity: initialOpacity }}

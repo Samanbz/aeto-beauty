@@ -1,20 +1,78 @@
 {
     "en": {
-        "header": "About us",
-        "p1": "Welcome to Aeto Beauty",
-        "p2": "Our journey began with the vision of making beauty products from around the world more accessible while ensuring the highest quality standards. Therefore, we constantly seek out the latest innovations and trends to offer you a diverse range of products suitable for every skin tone and skin type.",
-        "p3": "Our commitment to excellence extends across all aspects of our business. We work closely with reputable manufacturers and suppliers to ensure that every product in our range undergoes strict quality control checks. Your satisfaction and trust are of paramount importance to us.",
-        "p4": "However, what truly sets us apart is our ability to forge connections between different cultures and traditions. Through our global network, we are able to present you with unique products that not only fulfill your aesthetic needs but also tell a story. Every product you find at Aeto Beauty has been carefully curated to provide you with a holistic beauty experience.",
-        "p5": "We invite you to become part of our Aeto beauty community and embark on a journey with us that redefines beauty beyond borders. Explore the world of Aeto Beauty and let yourself be inspired by the power of global beauty.",
-        "p6": "Welcome to Aeto Beauty - where beauty connects."
+        "section1": {
+            "header": "Who we are",
+            "body": "As members of an exclusive network comprising doctors, medical professionals, pharmacies, drugstores, beauty salons, stores, and aesthetics experts, we consider ourselves pivotal in offering expert guidance to our highly specialized partners and their clientele."
+        },
+        "section2": {
+            "header": "What we do",
+            "body": "The effort required to test innovative products, establishing new brands, and identifying suitable purchasing conditions demands significant effort. Amidst these formidable challenges, we assist our clients in pinpointing precisely the right product for their unique business requirements, customized to their customer base."
+        },
+        "section3": {
+            "header": "The way we work",
+            "body1": "After we have welcomed you as a member of our partner program, we carry out an initial validation of the brands and products used and sold to date.",
+            "body2": "Here we find out what your company's focus is and what we can optimize together.",
+            "list": [
+                "Which products are no longer \"state of the art\" and need to be replaced by innovations?",
+                "What potential is not being exploited for your own company?",
+                "Does it make sense to expand the product range or to specialize?"
+            ]
+        },
+        "section4": {
+            "header": "Our global network",
+            "body": "Our journey began with the vision of making beauty products from all over the world more accessible while ensuring the highest quality standards. That's why we are constantly on the lookout for the latest innovations and trends to offer you a wide range of products for every skin tone and skin type."
+        },
+        "section5": {
+            "header": "Our Promise",
+            "body": "But what really sets us apart is our ability to create connections between different cultures and traditions. Through our global network, we are able to present you with unique products that not only fulfill your aesthetic needs, but also tell a story. Every product you find at AetO beauty has been carefully curated to provide you with a complete beauty experience."
+        },
+        "section6": {
+            "header": "Everything\nfrom a single source",
+            "body": "Once we have created a successful concept together, our online store is at your disposal. You can use it to make uncomplicated purchases at agreed conditions and can be sure that only selected and the best products are made available with guaranteed delivery."
+        },
+        "section7": {
+            "header": "Get in touch",
+            "body1": "We invite you to become part of our AetO beauty community and join us on a journey that transcends borders to redefine beauty. Explore the world of Aeto Beauty and be inspired by the power of global beauty.",
+            "body2": "Welcome to Aeto Beauty - where beauty connects.",
+            "botton": "contact us"
+        }
     },
     "de": {
-        "header": "Über uns",
-        "p1": "Willkommen bei Aeto Beauty",
-        "p2": "Unsere Reise begann mit der Vision, Schönheitsprodukte aus der ganzen Welt zugänglicher zu machen und gleichzeitig höchste Qualitätsstandards zu gewährleisten. Daher suchen wir ständig nach den neuesten Innovationen und Trends, um Ihnen eine vielfältige Auswahl an Produkten anzubieten, die für jeden Hautton und jeden Hauttyp geeignet sind.",
-        "p3": "Unser Engagement für Exzellenz erstreckt sich über alle Aspekte unseres Geschäfts. Wir arbeiten eng mit renommierten Herstellern und Lieferanten zusammen, um sicherzustellen, dass jedes Produkt in unserem Sortiment strengen Qualitätskontrollen unterliegt. Ihre Zufriedenheit und Ihr Vertrauen sind für uns von größter Bedeutung.",
-        "p4": "Was uns wirklich auszeichnet, ist jedoch unsere Fähigkeit, eine Verbindung zwischen verschiedenen Kulturen und Traditionen herzustellen. Durch unser globales Netzwerk können wir Ihnen einzigartige Produkte präsentieren, die nicht nur Ihre ästhetischen Bedürfnisse erfüllen, sondern auch eine Geschichte erzählen. Jedes Produkt, das Sie bei Aeto Beauty finden, wurde sorgfältig ausgewählt, um Ihnen ein ganzheitliches Schönheits-Erlebnis zu bieten.",
-        "p5": "Wir laden Sie ein, Teil unserer Aeto Beauty Community zu werden und mit uns auf eine Reise zu gehen, die Schönheit über Grenzen hinweg definiert. Entdecken Sie die Welt der Aeto Beauty und lassen Sie sich von der Kraft der globalen Schönheit inspirieren.",
-        "p6": "Willkommen bei Aeto Beauty - wo Schönheit verbindet."
+        "section1": {
+            "header": "Wer wir sind",
+            "body": "Als Teil eines exklusiven Netzwerks aus Ärzten, Fachleuten für Ästhetik, medizinischem Fachpersonal, Apothekern, Drogeriemärkten, Beautysalons und exklusiven Beautyshops sehen wir uns als festes Bindeglied zwischen einer professionellen Beratung unserer hochspezialisierten Partner und deren Endkunden."
+        },
+        "section2": {
+            "header": "Was wir tun",
+            "body": "Der Aufwand, innovative Produkte zu testen, neue Marken zu etablieren und passende Einkaufskonditionen zu erkennen, ist inzwischen immens. Bei all diesen Herausforderungen helfen wir unseren Kunden, genau das richtige Produkt für ihre eigenen Geschäftsbedürfnisse zu finden, maßgeschneidert auf ihren Kundenstamm."
+        },
+        "section3": {
+            "header": "Wie wir arbeiten",
+            "body1": "Nachdem wir Sie als Kunden in unser Partnerprogramm aufgenommen haben, folgt eine erste Validierung der bisher genutzten und vertriebenen Marken und Produkte.",
+            "body2": "Hierbei finden wir heraus, worin der Unternehmensfokus liegt und was wir gemeinsam optimieren können. Zum Beispiel:",
+            "list": [
+                "Welche Produkte sind nicht mehr \"state of the art\" und müssen durch Innovationen ersetzt werden?",
+                "Welche Potenziale werden für den eigenen Betrieb nicht ausgeschöpft?",
+                "Ist eine Produkterweiterung sinnvoll oder eher eine Spezialisierung?"
+            ]
+        },
+        "section4": {
+            "header": "Unser globales Netzwerk",
+            "body": "Unsere Reise begann mit der Vision, Schönheitsprodukte aus aller Welt zugänglicher zu machen und gleichzeitig höchste Qualitätsstandards zu gewährleisten. Deshalb sind wir ständig auf der Suche nach den neuesten Innovationen und Trends, um Ihnen eine breite Palette von Produkten für jeden Hautton und Hauttyp anbieten zu können."
+        },
+        "section5": {
+            "header": "Unser Versprechen",
+            "body": "Was uns jedoch wirklich auszeichnet, ist unsere Fähigkeit, Verbindungen zwischen verschiedenen Kulturen und Traditionen zu schaffen. Durch unser globales Netzwerk sind wir in der Lage, Ihnen einzigartige Produkte zu präsentieren, die nicht nur Ihre ästhetischen Bedürfnisse erfüllen, sondern auch eine Geschichte erzählen. Jedes Produkt, das Sie bei AetoBeauty finden, wurde sorgfältig kuratiert, um Ihnen ein ganzheitliches Schönheits Erlebnis zu bieten."
+        },
+        "section6": {
+            "header": "Alles\naus einer Hand",
+            "body": "Nachdem wir gemeinsam ein erfolgreiches Konzept erstellt haben, steht Ihnen unser Online-Shop zur Verfügung. Über diesen kaufen Sie zu vereinbarten Konditionen unkompliziert ein und können sich sicher sein, dass nur ausgewählte sowie die besten Produkte mit einer garantierten Lieferung zur Verfügung gestellt werden."
+        },
+        "section7": {
+            "header": "Kontakt aufnehmen",
+            "body1": "Wir laden Sie ein, Teil unserer Aeto Beauty-Community zu werden und sich mit uns auf eine Reise zu begeben, die Schönheit über Grenzen hinweg neu definiert.",
+            "body2": "Erkunden Sie die Welt von Aeto Beauty und lassen Sie sich von der Kraft der globalen Schönheit inspirieren.",
+            "botton": "Kontakt"
+        }
     }
 }
